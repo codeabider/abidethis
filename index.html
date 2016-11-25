@@ -1,0 +1,232 @@
+<!doctype html>
+<html data-ng-app="myapp" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta author="MFRP_Group-E"/>
+
+    <title>FOOSESHOES ONLINE SHOPPING-www.fooseshoes.com</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/css/shop.css">   
+  </head> 
+<body>
+  <!--Main Header Begins -->
+  <header>
+    <!-- header wrapper starts here --> 
+    <div class="headerWrapper">
+      <!-- text div portion --> 
+      <div class="fooText">FOOSESHOES</div>
+      <div class="login">LOGIN or REGISTER </div>
+      <div class="searchImg"></div>
+      <div class="clear"></div>
+    </div>
+  </header>
+  <!--Main Header Ends -->
+
+  <!-- Menu Part Begins -->
+  <div class="menu">
+    <div class="menuWrapper">
+      <!-- navigation panel -->
+    	<nav class="navigation"> 
+    	 <ul>
+      	 <li><a data-ng-click="selected(0)" data-ng-class="{activePage: 0==selectedIndex}" href="#home">Home</a></li>
+         <li><a data-ng-click="selected(1)" data-ng-class="{activePage: 1==selectedIndex}" href="#products">Products</a></li>
+         <li><a data-ng-click="selected(2)" data-ng-class="{activePage: 2==selectedIndex}" href="">About</a></li>
+         <li><a data-ng-click="selected(3)" data-ng-class="{activePage: 3==selectedIndex}" href="">Pages</a></li>
+         <li><a data-ng-click="selected(4)" data-ng-class="{activePage: 4==selectedIndex}" href="">Blog</a></li>
+         <li><a data-ng-click="selected(5)" data-ng-class="{activePage: 5==selectedIndex}" href="">Contact</a></li>
+    	 </ul>
+    	</nav>
+
+    	<!-- div for favourite button and wishlist button  -->
+      <div class="cart">
+        <!-- cart image -->
+        <div class="cartImg"></div>
+        <!-- dynamic counter for cart --> 
+        <span >{{cartcount}}</span>
+        <div class="clear"></div>
+      </div>
+      <!-- star div -->
+    	<div class="star">
+        <!-- star image -->
+    	  <div class="starImg"></div>
+        <!-- dynamic counter for star -->
+    	  <span >{{favcount}}</span>
+    	  <div class="clear"></div>
+      </div>
+    	<div class="clear"></div>
+    </div>
+  </div>
+  <!-- Menu Part Ends -->
+
+  <!-- dynmaic body view -->
+  <div class="bodyWrapper" data-ng-view></div>
+  
+  <!-- addon container goes here -->
+  <div class="addon">
+    <!-- addon child container start -->
+    <div class="addonContainer">
+      <!-- freeShipping container start --> 
+      <div class="freeShipping">
+        <span>FREE SHIPPING</span>
+        <div class="freeShippingContent">
+        <p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos Donecerat sem,</p>
+        </div>
+      </div>
+      <!-- freeShipping container end -->
+
+      <!-- testimonial container start --> 
+      <div class="testimonial">
+        <span>TESTIMONIALS</span>
+        <div class="testimonialContent">
+          <p class="testimonialDesc"> vel vulputate vel nibh Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos Donec erat sem , vehicula id, dictum sit [...]</p>
+          <div class="testimonialWriter">
+            <p>-John Doe-</p>
+          </div>
+        </div>
+      </div>
+      <!-- testimonial container end -->
+
+      <!-- blog news container starts --> 
+      <div class="blogNews">
+        <p class="blogHead">BLOG NEWS</p>
+          <div class="blogNewsContent">
+            <div class="day">
+              <p class="month">APR</p>
+              <p class="date">01</p>
+            </div>
+            <div class="bestNews"><a href="#">Nice &amp; clean. The best for you blog!</a>
+              <p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
+            </div>
+          </div>
+
+          <div class="blogNewsContent">
+            <div class="day">
+              <p class="month">APR</p>
+              <p class="date">01</p>
+            </div>
+            <div class="bestNews"><a href="#">What an Ecommerce theme!</a> 
+              <p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
+            </div>
+          </div>
+      </div>
+      <div class="clear"></div>
+      <!-- blog news container ends -->
+    </div>
+    <!-- addon child container ends --> 
+  </div>
+  <!-- addon container ends here -->
+     
+  <!-- footer goes here -->
+  <footer>
+    <!-- footerDescWrapper container -->
+		<div class="footerDescWrapper">
+      <div class="footerDesc">
+        <!-- textWidget container -->
+			  <div class="textWidgetWrapper">
+          <p> Text widget</p>
+          <div class="textWidgetContent"> Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+          </div>
+        </div>
+        <!-- textwidget container ends -->
+
+        <!-- twitter widget container -->
+        <div class="twitterWidgetWrapper">
+          <p class="twitterHead">Twitter widget<p>
+          <div class="twitterWidgetContent">  
+            <div class="twitterDesc"><span class="twitterId">@ericafustero</span> Why thank you? Your work looks awesome by the way! <span class="twitterId"> @treemelody</span>
+              <p class="dayAgo">19 days ago</p>
+            </div>
+
+            <div class="twitterDesc"><span class="twitterId">@roymarvelous</span> You can seek refund through If it is not advertised but it is :)
+              <p class="dayAgo">21 days ago</p>
+            </div>
+          </div>     
+			  </div>
+        <!-- twitter widget container ends -->
+
+        <!-- container for flicker icons -->
+        <div class="flickerWidgetWrapper">
+          <p>Flickr widget</p>  
+            <div class="flickerTop">
+              <div class="flickerIcon icon1"></div>
+              <div class="flickerIcon icon2"></div>
+              <div class="flickerIcon icon3"></div>
+              <div class="clear"></div>
+            </div>
+            
+            <div class="flickerBottom">
+              <div class="flickerIcon icon4"></div>
+              <div class="flickerIcon icon5"></div>
+              <div class="flickerIcon icon6"></div>
+              <div class="clear"></div>
+            </div>
+			  </div>
+        <div class="clear"></div>
+        <!-- container for flicker icons ends-->
+      </div>
+    </div>
+    <!-- footerDescWrapper container end -->
+
+    <!-- footer inputWrapper starts -->
+    <div class="footerInputWrapper">
+      <!-- container for newsLetter -->
+      <div class="newsLetterReg">
+        <input type="email" class="emailInput" name="emailId" placeholder="Enter email for newsletter"/>
+        <div class="buttonWrapper"><button class="regButton"></button></div>
+        <div class="clear"></div>
+      </div>
+      
+      <div class= "mediaIconsWrapper">
+        <!-- container for social icons -->
+        <div class="mediaIcons">
+          <div class="social fbicon"></div>
+          <div class="social twittericon"></div>
+          <div class="social gPlusIcon"></div>
+          <div class="social linkedInIcon"></div>
+          <div class="social flickerMedia"></div>
+          <div class="clear"></div>
+          <!-- container for social icons ends-->  
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!-- footer inputWrapper ends --> 
+
+    <!-- lower footer container starts -->
+    <div class="copyNavigationWrapper">
+      <div class="copyNavigation">
+        <div class="copyright">
+          <p>Copyright &copy; fooseshoes 2013.</p>
+          <p>Designed by EnzoLiVolti</p>
+        </div>
+
+        <!-- footer navigation starts -->
+        <div class="footerNav">
+          <a href="#">Home /</a>
+          <a href="#">Support /</a>
+          <a href="#">Terms and conditions /</a>
+          <a href="#">Faqs /</a>
+          <a href="#">Contact us</a>
+        </div>
+        <!-- footer navigation ends --> 
+        <div class="clear"></div>
+      </div>
+    </div>
+    <!-- lower footer container ends -->
+  </footer>
+  <!-- footer ends here -->
+
+  <!-- Links for js files --> 
+  <script type="text/javascript" src="js/lib/angular.js"></script>
+  <script type="text/javascript" src="js/lib/angular-route.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/script/factory.js"></script>
+  <script type="text/javascript" src="js/script/controller1.js"></script>
+  <script type="text/javascript" src="js/script/directive.js"></script>
+  <script type="text/javascript" src="js/script/filter.js"></script> 
+  <script type="text/javascript" src="js/script/services.js"></script>
+</body>
+
+</html>
